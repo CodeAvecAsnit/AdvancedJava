@@ -5,3 +5,5 @@ out/
 *.png
 *.ser
 *.txt
+.idea/
+
