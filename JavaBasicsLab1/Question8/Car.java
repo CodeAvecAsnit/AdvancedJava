@@ -1,5 +1,9 @@
 package JavaBasicsLab1.Question8;
 
+
+/**
+ * @author : Asnit Bakhati
+ */
 public class Car extends Vehicle implements Electric{
 
     public void setCarName(String name){this.vehicleModel=name;}

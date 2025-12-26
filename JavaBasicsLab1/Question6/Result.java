@@ -1,6 +1,11 @@
 package JavaBasicsLab1.Question6;
 
+
+/**
+ * @author : Asnit Bakhati
+ */
 public class Result extends Test{
+
     private int total;
 
     public int getTotal() {

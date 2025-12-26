@@ -1,5 +1,10 @@
 package JavaBasicsLab1.Question12;
 
+
+/**
+ * @author : Asnit Bakhati
+ */
+
 public class Multiply {
 
     public double divide(int a, int b) throws ArithmeticException{

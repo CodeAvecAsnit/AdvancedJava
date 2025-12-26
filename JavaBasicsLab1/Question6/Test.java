@@ -1,6 +1,11 @@
 package JavaBasicsLab1.Question6;
 
+
+/**
+ * @author : Asnit Bakhati
+ */
 public class Test extends Student{
+
     private int mathMarks;
     private int scienceMarks;
 

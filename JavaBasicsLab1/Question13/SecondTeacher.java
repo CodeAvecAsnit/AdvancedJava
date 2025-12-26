@@ -2,6 +2,11 @@ package JavaBasicsLab1.Question13;
 
 import java.security.SecureRandom;
 
+
+/**
+ * @author : Asnit Bakhati
+ */
+
 public class SecondTeacher extends Thread{
 
     @Override

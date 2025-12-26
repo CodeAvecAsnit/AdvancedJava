@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 /**
  * @author : Asnit Bakhati
- * Question number 3
+ * Question number 3 (Print Diagonals of matrix)
  */
 public class Matrix3D {
     public static void main(String[] args) {

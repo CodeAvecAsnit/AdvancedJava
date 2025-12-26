@@ -1,5 +1,8 @@
 package JavaBasicsLab1.Question6;
 
+/**
+ * @author : Asnit Bakhati
+ */
 public class Main {
     public static void main(String[] args) {
         Result student1 = new Result();

@@ -1,5 +1,9 @@
 package JavaBasicsLab1.Question7;
 
+
+/**
+ * @author : Asnit Bakhati
+ */
 public class GrandChild extends Child{
 
     private final int num = 69;

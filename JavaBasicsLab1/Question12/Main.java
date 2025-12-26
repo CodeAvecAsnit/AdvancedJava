@@ -2,6 +2,10 @@ package JavaBasicsLab1.Question12;
 
 import java.util.Scanner;
 
+
+/**
+ * @author : Asnit Bakhati
+ */
 public class Main{
 
 	public static void main(String[] args){

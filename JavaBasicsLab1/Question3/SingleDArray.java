@@ -2,7 +2,7 @@ package JavaBasicsLab1.Question3;
 
 /**
  * @author : Asnit Bakhati
- * Question number 3
+ * Question number 3 (Sum of 15th and 3rd or matrix)
  */
 public class SingleDArray {
     public static void main(String[] args) {

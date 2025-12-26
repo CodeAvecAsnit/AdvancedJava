@@ -4,6 +4,11 @@ package JavaBasicsLab1.Question14;
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 
+
+/**
+ * @author : Asnit Bakhati
+ */
+
 public class FileReaderWriter {
 
     public void writeInFile(File file,String content) throws IOException{

@@ -1,7 +1,7 @@
 package JavaBasicsLab1.Question5;
 /**
  * @author : Asnit Bakhati
- * Question number 5 (All the quesitons are here)
+ * Question number 5 (All )
  */
 public class StaticShow {
     public static int num;

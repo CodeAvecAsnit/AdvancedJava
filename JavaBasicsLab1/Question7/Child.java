@@ -1,6 +1,11 @@
 package JavaBasicsLab1.Question7;
 
+/**
+ * @author : Asnit Bakhati
+ */
+
 public class Child extends Parent{
+
     public final int num = 67;
     private int childData;
 

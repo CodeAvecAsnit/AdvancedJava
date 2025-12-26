@@ -2,6 +2,10 @@ package JavaBasicsLab1.Question3;
 
 import java.util.Scanner;
 
+/**
+ * @author : Asnit Bakhati
+ * Question No : 3 Jagged Array
+ */
 public class JaggedArray {
     public static void main(String[] args) {
         int jArr[][] = new int[3][];

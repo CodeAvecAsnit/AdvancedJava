@@ -1,5 +1,10 @@
 package JavaBasicsLab1.Question13;
 
+
+/**
+ * @author : Asnit Bakhati
+ */
+
 public class Table extends Thread{
     synchronized void printTable(int num,Sum sum){
         for(int i = 1 ; i <= 10 ; ++i){

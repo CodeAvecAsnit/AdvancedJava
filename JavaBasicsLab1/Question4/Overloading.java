@@ -2,7 +2,7 @@ package JavaBasicsLab1.Question4;
 
 /**
  * @author : Asnit Bakhati
- * Question number 4 (all of the questions are here)
+ * Question number 4 (constructor and methods overloading)
  */
 public class Overloading {
     int a;

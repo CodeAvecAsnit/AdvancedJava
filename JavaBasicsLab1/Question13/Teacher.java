@@ -4,6 +4,11 @@ import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.List;
 
+
+/**
+ * @author : Asnit Bakhati
+ */
+
 public class Teacher implements Runnable{
 
     @Override
