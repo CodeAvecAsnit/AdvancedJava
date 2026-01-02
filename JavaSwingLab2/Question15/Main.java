@@ -1,4 +1,4 @@
-package JavaSwingLab2.Question1;
+package JavaSwingLab2.Question15;
 
 import javax.swing.*;
 import javax.swing.border.LineBorder;
@@ -68,6 +68,7 @@ public class Main {
         comboBox.setBounds(20, 410, 120, 30);
         frame.add(comboBox);
 
+        frame.setTitle("Swing Form");
         frame.setVisible(true);
     }
 }
