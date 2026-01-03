@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class FlowLayoutExample extends JFrame {
-    public void initialize(){
+    public FlowLayoutExample(){
         this.setLayout(new FlowLayout());
         this.add(new JButton("Button 1"));
         this.add(new JButton("Button 2"));
@@ -17,7 +17,6 @@ public class FlowLayoutExample extends JFrame {
     }
 
     public static void main(String[] args) {
-        FlowLayoutExample layoutExample = new FlowLayoutExample();
-        layoutExample.initialize();
+        new FlowLayoutExample();
     }
 }
