@@ -21,8 +21,6 @@ public class ComboBoxExample{
         cb.setBounds(50, 50, 200, 30);
         frame.add(cb);
 
-        JFileChooser chooser = new JFileChooser();
-        chooser.showOpenDialog(frame);
 
         frame.setSize(400,500);
         frame.setLayout(null);
