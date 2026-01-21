@@ -1,7 +1,7 @@
 package JavaSwingLab2.Practise;
 
 import javax.swing.*;
-import java.awt.*;
+
 
 public class InputDialogBox extends JFrame {
     JFrame f;

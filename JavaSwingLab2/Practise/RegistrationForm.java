@@ -29,6 +29,21 @@ public class RegistrationForm extends JFrame {
         jc3 = new JCheckBox("Reading");
 
         jb1 = new JButton("Submit");
+        jb1.addActionListener(e -> {
+            JDesktopPane pane = new JDesktopPane();
+            pane.setBounds(0, 0, 500, 300);
+            JInternalFrame internalFrame = new JInternalFrame(
+                    "Welcome");
+            internalFrame.setSize(200, 100);
+            internalFrame.setVisible(true);
+            JLabel label = new JLabel("Welcome "+jt1.getText());
+            internalFrame.add(label);
+            pane.add(internalFrame);
+            add(pane);
+            setVisible(true);
+            revalidate();
+            repaint();
+        });
 
         ButtonGroup bg = new ButtonGroup();
         bg.add(jr1);
