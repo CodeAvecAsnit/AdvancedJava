@@ -1,4 +1,4 @@
-package JavaSwingLab2.Practise;
+package JavaSwingLab2.Question25;
 
 import javax.swing.*;
 

@@ -30,19 +30,8 @@ public class RegistrationForm extends JFrame {
 
         jb1 = new JButton("Submit");
         jb1.addActionListener(e -> {
-            JDesktopPane pane = new JDesktopPane();
-            pane.setBounds(0, 0, 500, 300);
-            JInternalFrame internalFrame = new JInternalFrame(
-                    "Welcome");
-            internalFrame.setSize(200, 100);
-            internalFrame.setVisible(true);
-            JLabel label = new JLabel("Welcome "+jt1.getText());
-            internalFrame.add(label);
-            pane.add(internalFrame);
-            add(pane);
-            setVisible(true);
-            revalidate();
-            repaint();
+            int result = JOptionPane.showConfirmDialog(this,"Are you sure you want to move on","Confirm",JOptionPane.YES_NO_OPTION);
+            if (result==JOptionPane.YES_OPTION) moveOn();
         });
 
         ButtonGroup bg = new ButtonGroup();
@@ -86,6 +75,12 @@ public class RegistrationForm extends JFrame {
         this.add(jc3);
 
         this.add(jb1);
+    }
+
+    public void moveOn(){
+        this.dispose();
+        new LoginForm(jt1.getText(),jp1.getSelectedText()).setVisible(true);
+
     }
 
     public static void main(String[] args) {
