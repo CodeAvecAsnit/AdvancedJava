@@ -1,0 +1,62 @@
+package connector;
+
+import data.User;
+import org.mindrot.jbcrypt.BCrypt;
+
+import java.sql.*;
+
+public class DatabaseOperator {
+    private final Connection connection;
+
+    public DatabaseOperator(JDBCConnector connector) throws SQLException, ClassNotFoundException {
+        connection = connector.establishConnection();
+    }
+
+//    public void createTable() throws SQLException {
+//        String query = "Create table if not exists users ( \n" +
+//                "                user_id int auto_increment primary key,\n" +
+//                "                user_name varchar(50) unique,\n" +
+//                "                password varchar(60));";
+//        Statement st = connection.createStatement();
+//        st.execute(query);
+//        System.out.println("Executed Successfully");
+//    }
+
+
+    public boolean existsByUserName(String userName){
+        String query = "Select 1 from users where username = ? ";
+        try (PreparedStatement ps = connection.prepareStatement(query)) {
+            ps.setString(1,userName);
+            ResultSet set = ps.executeQuery();
+            return set.next();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+
+    public boolean createUser(User user){
+        String query = "Insert into users(user_name, password) values(?,?)";
+        try(PreparedStatement ps = connection.prepareStatement(query)) {
+            ps.setString(1, user.getUserName());
+            ps.setString(2,user.getPassword());
+            int rowsUpdated = ps.executeUpdate();
+            return rowsUpdated>0;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public boolean loginUser(User user){
+        String query = "Select password from users where user_name = ? ";
+        try(PreparedStatement st = connection.prepareStatement(query)){
+            st.setString(1,user.getUserName());
+            ResultSet resultSet = st.executeQuery();
+            String hashedPass = String.valueOf(resultSet.next());
+            System.out.println(hashedPass);
+            return BCrypt.checkpw(user.getPassword(),hashedPass);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+}
