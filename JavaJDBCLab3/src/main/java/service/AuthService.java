@@ -5,6 +5,7 @@ import data.User;
 
 import java.util.Map;
 
-public interface RegistrationService {
+public interface AuthService {
      ResponseBody createUser(User user);
+     ResponseBody loginUser(User user);
 }

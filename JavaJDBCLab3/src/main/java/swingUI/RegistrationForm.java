@@ -2,28 +2,41 @@ package swingUI;
 
 import connector.DatabaseOperator;
 import connector.JDBCConnector;
-
+import controller.AuthController;
+import data.ResponseBody;
+import data.User;
+import service.AuthService;
+import service.impl.AuthServiceImpl;
 
 import javax.swing.*;
+import java.awt.*;
+import java.sql.SQLException;
 
 public class RegistrationForm extends JFrame {
-    JLabel l1,l2,l3,l4,l5;
+    AuthController controller;
+    JLabel l1,l2,l3,l4,l5,errorLabel;
     JTextField jt1;
     JPasswordField jp1;
     JRadioButton jr1,jr2;
     JCheckBox jc1,jc2,jc3;
-    JButton jb1;
+    JButton jb1,LoginPage;
 
-
-    public void setComponent(){
+    public void setComponent() throws SQLException, ClassNotFoundException {
         l1 = new JLabel("Name:");
         l2 = new JLabel("Password:");
         l3 = new JLabel("Gender:");
         l4 = new JLabel("Hobbies:");
         l5 = new JLabel(" ");
+        errorLabel = new JLabel();
+        errorLabel.setForeground(Color.RED);
 
-        jt1 = new JTextField();
-        jp1 = new JPasswordField();
+        JDBCConnector connector = new JDBCConnector();
+        DatabaseOperator operator = new DatabaseOperator(connector);
+        AuthService authService = new AuthServiceImpl(operator);
+        controller = new AuthController(authService);
+
+        jt1 = new JTextField(20);
+        jp1 = new JPasswordField(20);
 
         jr1 = new JRadioButton("Male");
         jr2 = new JRadioButton("Female");
@@ -38,62 +51,123 @@ public class RegistrationForm extends JFrame {
             if (result==JOptionPane.YES_OPTION) moveOn();
         });
 
+        LoginPage = new JButton();
+        LoginPage.addActionListener(e -> {
+            this.dispose();
+            new LoginForm(controller);
+        });
+
         ButtonGroup bg = new ButtonGroup();
         bg.add(jr1);
         bg.add(jr2);
 
-        l1.setBounds(50, 30, 100, 25);
-        jt1.setBounds(160, 30, 150, 25);
+        setLayout(new GridBagLayout());
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.insets = new Insets(5, 5, 5, 5);
+        gbc.anchor = GridBagConstraints.WEST;
 
-        l2.setBounds(50, 70, 100, 25);
-        jp1.setBounds(160, 70, 150, 25);
+        gbc.gridx = 0;
+        gbc.gridy = 0;
+        add(l1, gbc);
 
-        l3.setBounds(50, 110, 100, 25);
-        jr1.setBounds(160, 110, 70, 25);
-        jr2.setBounds(240, 110, 80, 25);
+        gbc.gridx = 1;
+        gbc.gridwidth = 3;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        gbc.weightx = 1.0;
+        add(jt1, gbc);
 
-        l4.setBounds(50, 150, 100, 25);
-        jc1.setBounds(160, 150, 80, 25);
-        jc2.setBounds(240, 150, 80, 25);
-        jc3.setBounds(320, 150, 100, 25);
+        gbc.gridx = 0;
+        gbc.gridy = 1;
+        gbc.gridwidth = 1;
+        gbc.fill = GridBagConstraints.NONE;
+        gbc.weightx = 0;
+        add(l2, gbc);
 
-        jb1.setBounds(160, 200, 100, 30);
-    }
+        gbc.gridx = 1;
+        gbc.gridwidth = 3;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        gbc.weightx = 1.0;
+        add(jp1, gbc);
 
-    public void addComponent() {
-        this.setLayout(null);
+        gbc.gridx = 0;
+        gbc.gridy = 2;
+        gbc.gridwidth = 1;
+        gbc.fill = GridBagConstraints.NONE;
+        gbc.weightx = 0;
+        add(l3, gbc);
 
-        this.add(l1);
-        this.add(jt1);
+        gbc.gridx = 1;
+        add(jr1, gbc);
 
-        this.add(l2);
-        this.add(jp1);
+        gbc.gridx = 2;
+        add(jr2, gbc);
 
-        this.add(l3);
-        this.add(jr1);
-        this.add(jr2);
+        gbc.gridx = 0;
+        gbc.gridy = 3;
+        add(l4, gbc);
 
-        this.add(l4);
-        this.add(jc1);
-        this.add(jc2);
-        this.add(jc3);
+        gbc.gridx = 1;
+        add(jc1, gbc);
 
-        this.add(jb1);
+        gbc.gridx = 2;
+        add(jc2, gbc);
+
+        gbc.gridx = 3;
+        add(jc3, gbc);
+
+        gbc.gridx = 1;
+        gbc.gridy = 4;
+        gbc.gridwidth = 2;
+        gbc.anchor = GridBagConstraints.CENTER;
+        add(jb1, gbc);
+
+        gbc.gridx = 0;
+        gbc.gridy = 5;
+        gbc.gridwidth = 4;
+        gbc.anchor = GridBagConstraints.CENTER;
+        add(errorLabel, gbc);
+
     }
 
     public void moveOn(){
-        this.dispose();
-        new LoginForm(jt1.getText(),jp1.getSelectedText()).setVisible(true);
+        errorLabel.setText("");
+
+        String username = jt1.getText();
+        String password = new String(jp1.getPassword());
+
+        if(username.length() < 8) {
+            errorLabel.setText("Username must be at least 8 characters long");
+            return;
+        }
+        if(!username.matches("[a-zA-Z0-9_]+")) {
+            errorLabel.setText("Username can only contain letters, numbers and underscore");
+            return;
+        }
+        if(password.length() < 8) {
+            errorLabel.setText("Password must be at least 8 characters long");
+            return;
+        }
+
+        User user = new User();
+        user.setUserName(username);
+        user.setPassword(password);
+        ResponseBody body = controller.registerUser(user);
+
+        if(body.getStatusCode()==200) {
+            this.dispose();
+            new LoginForm(controller).setVisible(true);
+        }else{
+            jp1.setText("");
+            errorLabel.setText(body.getMessage());
+        }
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException, ClassNotFoundException {
         RegistrationForm form = new RegistrationForm();
         form.setSize(500,300);
         form.setTitle("Registration Form");
         form.setComponent();
-        form.addComponent();
         form.setDefaultCloseOperation(3);
         form.setVisible(true);
     }
 }
-
