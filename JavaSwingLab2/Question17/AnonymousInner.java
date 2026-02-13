@@ -19,6 +19,7 @@ public class AnonymousInner extends JFrame {
         add(btn);
         setDefaultCloseOperation(3);
         setSize(200,250);
+        setTitle("Asnit");
         setVisible(true);
     }
 

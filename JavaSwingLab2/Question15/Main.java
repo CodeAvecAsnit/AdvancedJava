@@ -68,7 +68,7 @@ public class Main {
         comboBox.setBounds(20, 410, 120, 30);
         frame.add(comboBox);
 
-        frame.setTitle("Swing Form");
+        frame.setTitle("Asnit Swing Form");
         frame.setVisible(true);
     }
 }

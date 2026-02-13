@@ -15,6 +15,7 @@ public class SameClassEvent extends JFrame implements ActionListener {
         add(btn);
         setSize(300, 200);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setTitle("Asnit");
         setVisible(true);
     }
 

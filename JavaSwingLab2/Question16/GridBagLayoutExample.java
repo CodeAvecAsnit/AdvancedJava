@@ -18,6 +18,7 @@ public class GridBagLayoutExample extends JFrame {
         add(new JButton("Button Tres"),gbc);
         gbc.gridx = 1; gbc.gridy = 1;
         add(new JButton("Button Qua"),gbc);
+        setTitle("Asnit Grid Layout Example");
 
         setSize(300,200);
         setVisible(true);

@@ -6,12 +6,13 @@ public class ExternalHandler extends JFrame{
     JButton btn;
 
     public ExternalHandler(){
-        JButton btn = new JButton("External Click");
+        btn = new JButton("External Click");
         btn.addActionListener(new ExternaListener());
         add(btn);
         setTitle("External Event Handler");
         setDefaultCloseOperation(3);
         setSize(300,300);
+        setTitle("Asnit");
         setVisible(true);
     }
 

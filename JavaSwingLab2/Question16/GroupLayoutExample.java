@@ -1,6 +1,7 @@
 package JavaSwingLab2.Question16;
 
 import javax.swing.*;
+
 class GroupLayoutDemo extends JFrame {
     GroupLayoutDemo() {
         setTitle("GroupLayout Demo");
@@ -32,6 +33,7 @@ class GroupLayoutDemo extends JFrame {
 
         setSize(300, 200);
         setLocation(750, 150);
+        setTitle("Asnit Group Layout Demo");
         setVisible(true);
     }
 

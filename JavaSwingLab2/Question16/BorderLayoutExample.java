@@ -14,6 +14,7 @@ public class BorderLayoutExample extends JFrame {
         add(new JButton("Center"),BorderLayout.CENTER);
         setSize(300,300);
         setDefaultCloseOperation(3);
+        setTitle("Asnit Border Layout");
         setVisible(true);
     }
 

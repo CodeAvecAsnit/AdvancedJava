@@ -12,6 +12,7 @@ public class GridLayoutExample extends JFrame {
         }
         setSize(300, 200);
         setDefaultCloseOperation(3);
+        setTitle("Asnit GridLayoutExample");
         setVisible(true);
     }
 

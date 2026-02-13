@@ -15,6 +15,7 @@ public class InnerClassEvent extends JFrame {
         setDefaultCloseOperation(3);
         setTitle("Inner Class Event Handler");
         setSize(500,400);
+        setTitle("Asnit");
         setVisible(true);
     }
 

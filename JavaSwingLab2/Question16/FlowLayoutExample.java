@@ -13,6 +13,7 @@ public class FlowLayoutExample extends JFrame {
         this.add(new JButton("Button 5"));
         this.setSize(300,400);
         this.setDefaultCloseOperation(3);
+        this.setTitle("Asnit FlowLayout Example");
         this.setVisible(true);
     }
 
