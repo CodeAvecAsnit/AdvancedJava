@@ -1,8 +1,9 @@
-package swingUI;
+package JavaJDBCLab3.RegistrationProject.swingUI;
 
-import controller.AuthController;
-import data.ResponseBody;
-import data.User;
+
+import JavaJDBCLab3.RegistrationProject.controller.AuthController;
+import JavaJDBCLab3.RegistrationProject.data.ResponseBody;
+import JavaJDBCLab3.RegistrationProject.data.User;
 
 import javax.swing.*;
 import java.awt.*;
@@ -98,8 +99,6 @@ public class LoginForm extends JFrame {
             errorLabel.setText("Password cannot be empty");
             return;
         }
-
-        // Create user object
         User user = new User();
         user.setUserName(username);
         user.setPassword(password);

@@ -1,12 +1,12 @@
-package swingUI;
+package JavaJDBCLab3.RegistrationProject.swingUI;
 
-import connector.DatabaseOperator;
-import connector.JDBCConnector;
-import controller.AuthController;
-import data.ResponseBody;
-import data.User;
-import service.AuthService;
-import service.impl.AuthServiceImpl;
+import JavaJDBCLab3.RegistrationProject.DatabaseOperator;
+import JavaJDBCLab3.RegistrationProject.controller.AuthController;
+import JavaJDBCLab3.RegistrationProject.data.ResponseBody;
+import JavaJDBCLab3.RegistrationProject.data.User;
+import JavaJDBCLab3.RegistrationProject.service.AuthService;
+import JavaJDBCLab3.RegistrationProject.service.impl.AuthServiceImpl;
+import JavaJDBCLab3.connector.JDBCConnector;
 
 import javax.swing.*;
 import java.awt.*;

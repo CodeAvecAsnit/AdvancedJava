@@ -1,6 +1,7 @@
-package connector;
+package JavaJDBCLab3.RegistrationProject;
 
-import data.User;
+import JavaJDBCLab3.RegistrationProject.data.User;
+import JavaJDBCLab3.connector.JDBCConnector;
 import org.mindrot.jbcrypt.BCrypt;
 
 import java.sql.*;

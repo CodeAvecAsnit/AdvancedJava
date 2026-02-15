@@ -1,4 +1,4 @@
-package data;
+package JavaJDBCLab3.RegistrationProject.data;
 
 public class User {
     public String userName;

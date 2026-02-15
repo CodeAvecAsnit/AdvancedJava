@@ -1,10 +1,10 @@
-package service.impl;
+package JavaJDBCLab3.RegistrationProject.service.impl;
 
-import connector.DatabaseOperator;
-import data.ResponseBody;
-import data.User;
+import JavaJDBCLab3.RegistrationProject.DatabaseOperator;
+import JavaJDBCLab3.RegistrationProject.data.ResponseBody;
+import JavaJDBCLab3.RegistrationProject.data.User;
+import JavaJDBCLab3.RegistrationProject.service.AuthService;
 import org.mindrot.jbcrypt.BCrypt;
-import service.AuthService;
 
 
 public record AuthServiceImpl(DatabaseOperator databaseOperator) implements AuthService {
