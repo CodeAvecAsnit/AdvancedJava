@@ -12,5 +12,4 @@ public record AuthController(AuthService authService) {
     }
 
     public ResponseBody loginUser(User user){return authService.loginUser(user);}
-
 }
