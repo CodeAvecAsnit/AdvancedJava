@@ -10,7 +10,7 @@ public class JDBCConnector {
     private static final String DB_PASSWORD;
 
     static{
-        DB_URL = "jdbc:mysql://localhost:3306/javabank";
+        DB_URL = "jdbc:mysql://localhost:3306/javabank?allowMultipleQueries=true";
         DB_USERNAME = "root";
         DB_PASSWORD = "asnit123";
     }

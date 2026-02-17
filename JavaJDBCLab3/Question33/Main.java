@@ -1,7 +1,6 @@
 package JavaJDBCLab3.Question33;
 
 import JavaJDBCLab3.connector.JDBCConnector;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
