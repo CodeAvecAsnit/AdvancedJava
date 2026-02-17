@@ -1,9 +1,9 @@
-package JavaJDBCLab3.RegistrationProject.swingUI;
+package JavaJDBCLab3.Question37.swingUI;
 
 
-import JavaJDBCLab3.RegistrationProject.controller.AuthController;
-import JavaJDBCLab3.RegistrationProject.data.ResponseBody;
-import JavaJDBCLab3.RegistrationProject.data.User;
+import JavaJDBCLab3.Question37.controller.AuthController;
+import JavaJDBCLab3.Question37.data.ResponseBody;
+import JavaJDBCLab3.Question37.data.User;
 
 import javax.swing.*;
 import java.awt.*;

@@ -1,6 +1,6 @@
-package JavaJDBCLab3.RegistrationProject;
+package JavaJDBCLab3.Question37;
 
-import JavaJDBCLab3.RegistrationProject.data.User;
+import JavaJDBCLab3.Question37.data.User;
 import JavaJDBCLab3.connector.JDBCConnector;
 import org.mindrot.jbcrypt.BCrypt;
 

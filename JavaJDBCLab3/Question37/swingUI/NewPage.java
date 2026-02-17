@@ -1,4 +1,4 @@
-package JavaJDBCLab3.RegistrationProject.swingUI;
+package JavaJDBCLab3.Question37.swingUI;
 
 import javax.swing.*;
 

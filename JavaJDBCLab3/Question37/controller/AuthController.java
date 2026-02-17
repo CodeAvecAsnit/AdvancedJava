@@ -1,9 +1,9 @@
-package JavaJDBCLab3.RegistrationProject.controller;
+package JavaJDBCLab3.Question37.controller;
 
 
-import JavaJDBCLab3.RegistrationProject.data.ResponseBody;
-import JavaJDBCLab3.RegistrationProject.data.User;
-import JavaJDBCLab3.RegistrationProject.service.AuthService;
+import JavaJDBCLab3.Question37.data.ResponseBody;
+import JavaJDBCLab3.Question37.data.User;
+import JavaJDBCLab3.Question37.service.AuthService;
 
 public record AuthController(AuthService authService) {
 

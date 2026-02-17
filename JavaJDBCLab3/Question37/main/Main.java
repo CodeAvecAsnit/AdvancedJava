@@ -1,11 +1,11 @@
-package JavaJDBCLab3.RegistrationProject.main;
+package JavaJDBCLab3.Question37.main;
 
-import JavaJDBCLab3.RegistrationProject.DatabaseOperator;
-import JavaJDBCLab3.RegistrationProject.controller.AuthController;
-import JavaJDBCLab3.RegistrationProject.data.ResponseBody;
-import JavaJDBCLab3.RegistrationProject.data.User;
-import JavaJDBCLab3.RegistrationProject.service.AuthService;
-import JavaJDBCLab3.RegistrationProject.service.impl.AuthServiceImpl;
+import JavaJDBCLab3.Question37.DatabaseOperator;
+import JavaJDBCLab3.Question37.controller.AuthController;
+import JavaJDBCLab3.Question37.data.ResponseBody;
+import JavaJDBCLab3.Question37.data.User;
+import JavaJDBCLab3.Question37.service.AuthService;
+import JavaJDBCLab3.Question37.service.impl.AuthServiceImpl;
 import JavaJDBCLab3.connector.JDBCConnector;
 
 import java.sql.SQLException;

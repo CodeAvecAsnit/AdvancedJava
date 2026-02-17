@@ -1,9 +1,9 @@
-package JavaJDBCLab3.RegistrationProject.service.impl;
+package JavaJDBCLab3.Question37.service.impl;
 
-import JavaJDBCLab3.RegistrationProject.DatabaseOperator;
-import JavaJDBCLab3.RegistrationProject.data.ResponseBody;
-import JavaJDBCLab3.RegistrationProject.data.User;
-import JavaJDBCLab3.RegistrationProject.service.AuthService;
+import JavaJDBCLab3.Question37.DatabaseOperator;
+import JavaJDBCLab3.Question37.data.ResponseBody;
+import JavaJDBCLab3.Question37.data.User;
+import JavaJDBCLab3.Question37.service.AuthService;
 import org.mindrot.jbcrypt.BCrypt;
 
 
