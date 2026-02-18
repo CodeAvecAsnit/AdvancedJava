@@ -13,7 +13,6 @@ public class TransactionExample {
         Connection connection = null;
         PreparedStatement wSt = null;
         PreparedStatement dSt = null;
-
         try{
             connection = DriverManager.getConnection(url,user,password);
             connection.setAutoCommit(false);
