@@ -26,9 +26,7 @@ public class NetworkingDemo {
 
 
             BufferedReader reader =
-                    new BufferedReader(
-                            new InputStreamReader(url1.openStream()));
-
+                    new BufferedReader(new InputStreamReader(url1.openStream()));
             String line;
             int count = 0;
 
