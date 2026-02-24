@@ -3,7 +3,7 @@ package JavaLab4Networking.Question31;
 import java.io.*;
 import java.net.*;
 
-    public class TCPSocket {
+    public class TCPServer {
         public static void main(String[] args) {
             try {
                 ServerSocket serverSocket = new ServerSocket(5000);
@@ -26,7 +26,6 @@ import java.net.*;
                         break;
                     }
                     System.out.println("Client: " + message);
-
                     System.out.print("Server: ");
                     message = console.readLine();
                     output.println(message);
