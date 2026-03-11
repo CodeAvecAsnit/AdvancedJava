@@ -12,7 +12,7 @@ public class Main {
         JDBCConnector connector = new JDBCConnector();
         Connection connection = connector.establishConnection();
         Statement st = connection.createStatement();
-        String query = "Select *from Users";
+        String query = "Select *from users";
         ResultSet set = st.executeQuery(query);
         while(set.next()){
             System.out.println(set.getInt("user_id")+". "+set.getString("user_name"));
