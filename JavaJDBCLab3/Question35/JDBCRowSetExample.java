@@ -6,6 +6,7 @@ import java.sql.SQLException;
 
 public class JDBCRowSetExample {
     public static void main(String[] args) {
+            System.out.println("Asnit's JDBC(Question 35) JDBC Rowset");
             try {
                 JdbcRowSet jrs = RowSetProvider.newFactory().createJdbcRowSet();
                 jrs.setUrl("jdbc:mysql://localhost:3306/javabank");

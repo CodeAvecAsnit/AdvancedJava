@@ -9,6 +9,9 @@ import java.sql.Statement;
 
 public class Main {
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
+        System.out.println("Asnit's JDBC (Question 30)");
+        System.out.println();
+        System.out.println("Result Data :)");
         JDBCConnector connector = new JDBCConnector();
         Connection conn = connector.establishConnection();
         String query = "Select *from result";

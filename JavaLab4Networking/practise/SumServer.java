@@ -1,4 +1,4 @@
-package JavaLab4Networking;
+package JavaLab4Networking.practise;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;

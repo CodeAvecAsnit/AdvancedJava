@@ -1,4 +1,4 @@
-package JavaLab4Networking;
+package JavaLab4Networking.practise;
 
 public class test {
     public static void main(String[] args) {

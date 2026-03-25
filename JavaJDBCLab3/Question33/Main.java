@@ -9,6 +9,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
+        System.out.println("Asnit's JDBC(Question 33)");
         JDBCConnector connector = new JDBCConnector();
         Connection conn = connector.establishConnection();
         Scanner sc = new Scanner(System.in);

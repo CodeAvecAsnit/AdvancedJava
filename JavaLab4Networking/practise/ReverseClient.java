@@ -1,4 +1,4 @@
-package JavaLab4Networking;
+package JavaLab4Networking.practise;
 
 import java.io.*;
 import java.net.*;

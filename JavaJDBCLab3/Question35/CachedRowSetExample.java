@@ -2,10 +2,13 @@ package JavaJDBCLab3.Question35;
 
 import javax.sql.rowset.CachedRowSet;
 import javax.sql.rowset.RowSetProvider;
+import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class CachedRowSetExample {
     public static void main(String[] args) {
+        System.out.println("Asnit's JDBC(Question 35) JDBC Cached Row Set");
         try {
             CachedRowSet crs = RowSetProvider.newFactory().createCachedRowSet();
             crs.setUrl("jdbc:mysql://localhost:3306/javabank");
@@ -20,15 +23,26 @@ public class CachedRowSetExample {
                         crs.getString("emp_name") + " " +
                         crs.getDouble("emp_salary"));
             }
+
             crs.beforeFirst();
+
             while (crs.next()) {
-                if (crs.getInt("emp_id") == 1) {
+                if (crs.getInt("emp_id") == 4) {
                     crs.updateDouble("emp_salary", 95000.00);
                     crs.updateRow();
                 }
             }
-            crs.acceptChanges();
+
+            Connection conn = DriverManager.getConnection(
+                    "jdbc:mysql://localhost:3306/javabank", "root", "asnit123");
+            conn.setAutoCommit(false);
+
+            crs.acceptChanges(conn);
+            conn.commit();
+            conn.close();
             crs.close();
-        } catch (SQLException e) {e.printStackTrace();}
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }

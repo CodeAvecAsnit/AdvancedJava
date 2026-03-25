@@ -11,9 +11,9 @@ public class Main {
         JDBCConnector connector = new JDBCConnector();
         Connection conn = connector.establishConnection();
         Statement statement = conn.createStatement();
-        String query = "Insert into users(user_name) values(\"weekday\")";
+        String query = "Insert into users(user_name) values(\"AWAZ_AAYO\")";
         int rows = statement.executeUpdate(query);
-        if(rows>0) System.out.println("Success");
+        if(rows>0) System.out.println("Successfully Inserted.");
         else System.out.println("Failed");
     }
 }
