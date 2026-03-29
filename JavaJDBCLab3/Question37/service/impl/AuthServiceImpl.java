@@ -23,7 +23,7 @@ public record AuthServiceImpl(DatabaseOperator databaseOperator) implements Auth
     @Override
     public ResponseBody loginUser(User user) {
         if (!databaseOperator.existsByUserName(user.getUserName()))
-            return new ResponseBody(404,"Error","User with this username not found.");
+            return new ResponseBody(404,"Error","User with this USERNAME not found.");
 
         if (databaseOperator.loginUser(user))
             return new ResponseBody(200,"Success","User Successfully Logged In");
