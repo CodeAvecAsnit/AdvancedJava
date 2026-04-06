@@ -18,8 +18,6 @@ public class Main{
         AuthController authController = new AuthController(authService);
 
         User user = new User("JohnDoe","janeSmith23");
-//        ResponseBody responseBody = authController.registerUser(user);
-//        if(responseBody.getStatusCode()==200){
             ResponseBody body = authController.loginUser(user);
             if(body.getStatusCode()==200) System.out.println("Test Successful");
             else System.out.println("Something went wrong. Please debug");
@@ -28,7 +26,6 @@ public class Main{
             ResponseBody newBody = authController.loginUser(user);
             if(newBody.getStatusCode()!=200) System.out.println("Another test success");
             else System.out.println("The test has failed and something went wrong.");
-//        } else System.out.println("There is wrong during registration");
 
     }
 }
