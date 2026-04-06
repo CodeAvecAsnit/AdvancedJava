@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class Main extends JFrame  implements WindowListener, ItemListener, FocusListener, KeyListener {
+public class Main extends JFrame  implements WindowListener, ItemListener{
 
     JLabel msg;
     JCheckBox cb,cb2;
@@ -29,8 +29,6 @@ public class Main extends JFrame  implements WindowListener, ItemListener, Focus
         addWindowListener(this);
         cb.addItemListener(this);
         cb2.addItemListener(this);
-        tf.addFocusListener(this);
-        tf.addKeyListener(this);
         addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -40,9 +38,6 @@ public class Main extends JFrame  implements WindowListener, ItemListener, Focus
         setVisible(true);
     }
 
-
-    public void focusGained(FocusEvent e) {}
-    public void focusLost(FocusEvent e) {}
 
     public void keyTyped(KeyEvent e) {msg.setText(e.getKeyChar()+" has been typed.");}
 

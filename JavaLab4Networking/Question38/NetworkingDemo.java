@@ -9,13 +9,13 @@ public class NetworkingDemo {
 
         try {
             // Method 1: Full URL
-            URL url1 = new URL("https://chat.openai.com/");
+            URL url1 = new URL("https:/youtube.com/");
 
             // Method 2: Protocol + Host + File
-            URL url2 = new URL("https", "chat.openai.com", "/");
+            URL url2 = new URL("https", "tiktok.com", "/");
 
             // Method 3: Base + Relative
-            URL base = new URL("https://chat.openai.com/");
+            URL base = new URL("https://google.com/");
             URL url3 = new URL(base, "auth/login");
 
             System.out.println("Protocol: " + url1.getProtocol());
@@ -56,7 +56,7 @@ public class NetworkingDemo {
             }
 
             reader2.close();
-            InetAddress ip = InetAddress.getByName("chat.openai.com");
+            InetAddress ip = InetAddress.getByName("google.com");
             System.out.println("Host Name: " + ip.getHostName());
             System.out.println("IP Address: " + ip.getHostAddress());
 
