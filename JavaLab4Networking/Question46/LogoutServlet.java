@@ -1,4 +1,4 @@
-package JavaLab4Networking.Question47;
+package JavaLab4Networking.Question46;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;

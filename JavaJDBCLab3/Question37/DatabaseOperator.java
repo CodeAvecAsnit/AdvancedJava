@@ -13,17 +13,6 @@ public class DatabaseOperator {
         connection = connector.establishConnection();
     }
 
-//    public void createTable() throws SQLException {
-//        String query = "Create table if not exists users ( \n" +
-//                "                user_id int auto_increment primary key,\n" +
-//                "                user_name varchar(50) unique,\n" +
-//                "                password varchar(60));";
-//        Statement st = connection.createStatement();
-//        st.execute(query);
-//        System.out.println("Executed Successfully");
-//    }
-
-
     public boolean existsByUserName(String userName){
         String query = "Select 1 from users where user_name = ? ";
         try (PreparedStatement ps = connection.prepareStatement(query)) {
