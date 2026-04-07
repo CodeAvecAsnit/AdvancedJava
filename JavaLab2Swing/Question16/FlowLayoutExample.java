@@ -1,0 +1,23 @@
+package JavaLab2Swing.Question16;
+
+import javax.swing.*;
+import java.awt.*;
+
+public class FlowLayoutExample extends JFrame {
+    public FlowLayoutExample(){
+        this.setLayout(new FlowLayout(FlowLayout.RIGHT,20,20));
+        this.add(new JButton("Button 1"));
+        this.add(new JButton("Button 2"));
+        this.add(new JButton("Button 3"));
+        this.add(new JButton("Button 4"));
+        this.add(new JButton("Button 5"));
+        this.setSize(300,400);
+        this.setDefaultCloseOperation(3);
+        this.setTitle("Asnit FlowLayout Example");
+        this.setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        new FlowLayoutExample();
+    }
+}
