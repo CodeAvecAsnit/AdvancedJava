@@ -8,7 +8,7 @@ import javafx.scene.*;
 
 public class FlowPaneExample extends Application {
     public static void main(String[] args) {
-        launch(args);
+        launch();
     }
     @Override
     public void start(Stage stage) throws Exception {
